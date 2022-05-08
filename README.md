@@ -6,3 +6,4 @@ Apex Stat tracker for X box, Plastation, Orgin
 
 Using Tracker.gg API
 
+Project will be merged with another Api to add additional content and stats
