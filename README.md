@@ -1,3 +1,7 @@
+Welcome to Apex Vs
+
+Stat Tracker App for Orgin, Playstation , and Xbox
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
