@@ -17,7 +17,8 @@ text-align: center;
 const Menu = () => {
   return (
    
-    <Play />
+    <button><p>Play</p></button>
+   
    
 
   );
