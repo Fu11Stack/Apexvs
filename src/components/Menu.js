@@ -2,9 +2,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import BannerL from '../Images/NewBan.png';
+import { motion } from 'framer-motion';
 
 
-const Play = styled.button`
+const Play = styled(motion.button)`
 color: rgb(176,176,176);
 
 justify content: space-between;
@@ -45,11 +46,15 @@ span {
 }
 
 `;
+const TopBar = styled(motion.div)`
+position: absolute;
+display: flex;
+justify-content: center;
+` 
 
 
-const Header = styled.div`
+const Banner = styled.div`
   display: flex;
-  justify-content: center;
     .pic {
     width: 600px;
     height: auto;
@@ -74,20 +79,27 @@ const Menu = () => {
 
   
   <div style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/Wraith.jpg'})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height : '100vh' }}> 
-  <Header>
-    <img className="pic" src={BannerL} alt="Banner"/>
-    
-    <Play><span>PLAY</span></Play>
-    <Play><span>LEGENDS</span></Play>
-    <Play><span>TRACKER</span></Play>
-    <Play><span>STORE</span></Play>
-    <Play><span>APEX</span></Play>
-    
-    <HeaderR />
-   
-  </Header>
-  </div> 
+  
+  <TopBar
+        initial={{ right: '20%', top: '-20%' }}
+        animate={{
+        right: '2%',
+        top: '0%',
+        transition: { duration: 2, delay: 0.5 },
+        }}>
+      <Banner><img className="pic" src={BannerL} alt="Banner"/></Banner>
+        <Play><span>PLAY</span></Play>
+        <Play><span>LEGENDS</span></Play>
+        <Play><span>TRACKER</span></Play>
+        <Play><span>STORE</span></Play>
+        <Play><span>APEX</span></Play>
+        <HeaderR />
+     
+    </TopBar>  
 
+  </div> 
+ 
+  
   );
 };
 
